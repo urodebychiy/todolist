@@ -44,4 +44,8 @@ public class TaskController {
         taskService.deleteTask(id);
     }
 
+    @GetMapping("/completed")
+    public List<Task> getCompletedTasks() {
+        return taskService.getTasksByCompleted(true);
+    }
 }
